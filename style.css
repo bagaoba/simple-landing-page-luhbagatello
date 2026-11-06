@@ -1,0 +1,294 @@
+/* Configurações gerais */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #FFFFFF;
+}
+
+html, body {
+    width: 100dvw;
+    min-height: 100dvh;
+    background: linear-gradient(
+        180deg,
+        rgb(48, 48, 48) 0%,
+        rgb(48, 48, 48) 75%,
+        rgb(0, 0, 0) 100%
+    );
+}
+
+body {
+    min-height: 100dvh;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.nomes {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 40px;
+    font-weight: bolder;
+
+}
+
+#insta{
+    color: #ffffff77;
+    font-weight: 400;
+}
+
+/** FOTO DA MÃE **/
+
+.story-ring {
+
+    width: 200px;
+    height: 200px;
+    padding: 4px;
+    border-radius: 100%;
+    background: linear-gradient(
+        45deg,
+        #fed975,
+        #FA7E1E,
+        #D62976,
+        #962FBF,
+        #4F5BD5
+    );
+}
+
+
+.story-ring img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgb(48, 48, 48);
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-ring img:hover{
+    transform: scale(1.06);
+}
+
+/* Container */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    gap: 16px;
+    flex: 1;
+}
+
+
+/* Mensagem de boas-vindas */
+.cards{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 980px;
+    padding: 20px;
+}
+
+.slide {
+    display: none;
+}
+
+.slide.ativo {
+    display: block;
+}
+
+.aviso {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    max-height: 100%;
+    padding: 5dvh 5dvw;
+    text-align: center;
+    justify-content: center;
+    background: linear-gradient(
+        180deg,
+        rgba(48, 48, 48, 1) 0%,
+        rgb(43, 43, 43) 80%,
+        rgb(32, 32, 32) 100%);
+    border: solid 1px rgb(87, 87, 87);
+    border-radius: 15px;
+    h1 {
+        font-size: 20px;
+        font-weight: bolder;
+        margin-bottom: 20px;
+    }
+    span {
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+
+/* Card do carrossel */
+.detalhes {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    background: linear-gradient(
+        180deg,
+        rgba(48, 48, 48, 1) 0%,
+        rgb(43, 43, 43) 80%,
+        rgb(32, 32, 32) 100%);
+    border: solid 1px rgb(87, 87, 87);
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.conteudo-slide {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+}
+
+.carrossel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.seta {
+    flex-shrink: 0;
+    background: none;
+    border: 1px solid rgb(87, 87, 87);
+    border-radius: 50%;
+    padding: 0px 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(158, 158, 158);
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    user-select: none;
+}
+
+.anterior,
+.proximo {
+    position: static;
+    transform: none;
+}
+
+/* Estilização compartilhada */
+
+.btn {
+    position: relative;
+    width: 67dvw;
+    max-width: 980px;
+    height: 58px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.06);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.411);
+}
+
+/*ICONES*/
+.btn-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.btn-whatsapp .btn-icon {
+    width: 24px;
+    height: 24px;
+    right: 25px;
+    left: auto;
+}
+.btn-telegram .btn-icon {
+    width: 23px;
+    height: 23px;
+    right: 25px;
+    left: auto;
+}
+
+.btn-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    line-height: 12px;
+    white-space: nowrap;
+}
+
+/* Botão WhatsApp */
+
+.btn-whatsapp {
+    background: #25D267;
+    background: linear-gradient(
+        180deg,
+        rgba(37, 210, 103, 1) 0%,
+        rgba(0, 152, 63, 1) 100%
+    );
+}
+
+/* Botão Telegram */
+
+.btn-telegram {
+    background: #37BBFE;
+    background: linear-gradient(
+        180deg,
+        rgba(55, 187, 254, 1) 0%,
+        rgba(0, 125, 200, 1) 100%
+    );
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 0 12px 12px;
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .detalhes {
+        width: 100%;
+        max-width: 450px;
+    }
+}
